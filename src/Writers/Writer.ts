@@ -1,4 +1,4 @@
-import { GameOverException } from '@/Shared/exceptions';
+import { GameOverException } from '../Shared/exceptions';
 
 export type writer = {
   nickname: string;
