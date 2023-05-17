@@ -1,4 +1,5 @@
-import { GameOverException } from '@/Shared/exceptions';
+import { GameOverException } from '../Shared/exceptions';
+import { defaultMission } from './config';
 import { Text, text } from './Text';
 
 export type mission = {
@@ -12,7 +13,11 @@ export class Mission {
   private time: number;
   private Text: Text;
 
-  public constructor(name: string, time: number, words: string[]) {
+  public constructor(
+    name: string = defaultMission.name,
+    time: number = defaultMission.time,
+    words: string[] = defaultMission.text
+  ) {
     this.name = name;
     this.time = time;
 
